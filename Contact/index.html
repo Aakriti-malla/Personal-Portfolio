@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en-US" dir="ltr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- <link rel="stylesheet" href="style.css"> -->
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="owl.carousel.min.css">
+	<link rel="stylesheet" href="font-awesome.css">
+	<link rel="stylesheet" href="contact.css">
+	<link rel="icon" href="../images/a.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="../index.js"></script>
+	<title>Contact | Aakriti Malla</title>
+</head>
+
+<body>
+	<!-- pre-loader  -->
+	<div class="preloader"></div>
+
+	<!-- navbar  -->
+	<div class="navbar">
+		<nav class="navB">
+			<ul class="nav-list">
+				<li style="padding-left: 20px;"><a href="../index.html">Home</a></li>
+				<li><a href="../About">About</a></li>
+				<li><a href="../Projects">Projects</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<!-- Contact Section Start -->
+	<section class="contact section-padding">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-8">
+					<div class="section-title">
+						<h2>get in <span>touch</span></h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+
+				<div class="col-lg-4 col-md-5" style="margin-top: 30px;">
+					<img src="img.svg" alt="image" style="margin-bottom: 20px;">
+					<footer class="footer">
+						<div class="bottom">
+							<ul class="footer-list">
+								<li><a href="mailto:aakritimalla91@gmail.com" target="_blank"><img
+											src="../About/images/icons/gmail.svg" alt="E-mail"></a>
+								</li>
+								<li><a href="https://twitter.com/iaakritimalla" target="_blank"><img
+											src="../About/images/icons/twitter.svg" alt="Twitter"></a></li>
+								<li><a href="https://github.com/Aakriti-malla" target="_blank"><img
+											src="../About/images/icons/github.svg" alt="Github"></a>
+								</li>
+								<li><a href="https://www.linkedin.com/in/aakriti-malla/" target="_blank"><img
+											src="../About/images/icons/linkedin.svg" alt="linkedin"></a></li>
+							</ul>
+						</div>
+					</footer>
+
+				</div>
+				<div class="col-lg-8 col-md-7 justify-content-center align-items-center">
+					<div class="contact-form">
+						<form class="contact" name="contact" action="" method="post">
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="form-group">
+										<input type="text" name="name" placeholder="Your Name" class="form-control">
+									</div>
+								</div>
+								<!-- <div class="col-lg-6">
+									<div class="form-group">
+										<input type="text" name="email" placeholder="Your Email" class="form-control">
+									</div>
+								</div> -->
+							</div>
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="form-group">
+										<input type="text" name="subject" placeholder="Subject" class="form-control">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="form-group">
+										<textarea name="message" placeholder="Your Message"
+											class="form-control"></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-12" style="justify-content: center;">
+									<button name="submit" type="submit" class="btn btn-2">Send Message</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Contact Section End -->
+
+	<!-- Contact Form Here -->
+	<script>
+		var form = document.forms["contact"];
+		form.addEventListener('submit', contact_submit, false);
+
+		function contact_submit(e) {
+			// Stop Form From Submitting
+			e.preventDefault();
+
+			// Set Initial Variables
+			var target = e.target || e.srcElement;
+			var to = 'aakritimalla91@gmail.com';
+			var uri = 'mailto:' + to;
+			var body = '';
+
+			// Set Form Values to Variables
+			var name = target.elements['name'].value;
+			var subject = target.elements['subject'].value;
+			var message = target.elements['message'].value;
+
+			// Build Body / Message with all Input Fields
+			body += message + "\r\n\r\n";
+			body += "Name: " + name + "\r\n";
+
+			// Build final Mailto URI
+			uri += '?subject=' + encodeURIComponent(subject);
+			uri += '&body=' + encodeURIComponent(body);
+
+			// Open Mailto in New Window / Tab
+			window.open(uri, '_blank');
+		}
+	</script>
+
+</body>
+
+</html>

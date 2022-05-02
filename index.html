@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/a.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <script src="index.js"></script>
+  <script src="https://kit.fontawesome.com/33c2ce40f1.js" crossorigin="anonymous"></script>
+  <title>Aakriti Malla</title>
+</head>
+
+<body onclick="myfunction()">
+  <!-- pre-loader  -->
+
+  <div class="preloader"></div>
+
+
+  <!-- navbar -->
+
+  <nav class="navbar">
+    <div class="brand-title">Aakriti Malla</div>
+    <a href="#" class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <div class="navbar-links">
+      <ul>
+        <li><a class="a" href="Aakriti_Malla__CV.pdf" download="Aakriti Malla - CV">CV</a></li>
+        <li> <a class="a" href="Projects">Projects</a></li>
+        <li><a class="a" href="Contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <button id="dark"><img src="images/moon3D.png" id="icon"></button>
+
+  <!-- main -->
+  <div class="body1 full-screen align-center">
+    <div class="float-child">
+      <div class="info">
+        <h1>I'm <span class="auto-input"></span></h1>
+        <p>I am student at Indira Gandhi Delhi Technical University For Women<br>
+          pursuing Master Of Computer Applications.<br><br> I am an aspiring Software Development Engineer. </p>
+        <div class="wrapper" style="margin-top: 20px;">
+          <button class="cta">
+            <a href="About" style="text-decoration: none;">
+              <span>About Me</span>
+              <svg width="15px" height="10px" viewBox="0 0 13 10">
+                <path d="M1,5 L11,5"></path>
+                <polyline points="8 1 12 5 8 9"></polyline>
+              </svg></a>
+          </button>
+        </div>
+        <!-- <button class="download"><a href="Aakriti_Malla__CV.pdf" download="Aakriti Malla - CV">Download CV</a></button> -->
+      </div>
+      <footer class="footer">
+        <div class="bottom">
+          <ul class="footer-list">
+            <li><a href="mailto:aakritimalla91@gmail.com" target="_blank"><img src="images/icons/gmail.svg"
+                  alt="E-mail"></a>
+            </li>
+            <li><a href="https://twitter.com/iaakritimalla" target="_blank"><img src="images/icons/twitter.svg"
+                  alt="Twitter"></a></li>
+            <li><a href="https://github.com/Aakriti-malla" target="_blank"><img src="images/icons/github.svg"
+                  alt="Github"></a>
+            </li>
+            <li><a href="https://www.linkedin.com/in/aakriti-malla/" target="_blank"><img
+                  src="images/icons/linkedin.svg" alt="linkedin"></a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <div class="float-child">
+      <section class="sect-img">
+        <img src="images/img1.jpg" alt="img" class="image">
+      </section>
+
+    </div>
+  </div>
+
+  <script>
+    const toggleButton = document.getElementsByClassName('toggle-button')[0]
+    const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+    toggleButton.addEventListener('click', () => {
+      navbarLinks.classList.toggle('active')
+    })
+  </script>
+  <script>
+    var icon = document.getElementById("icon");
+    icon.onclick = function () {
+      document.body.classList.toggle("dark-theme");
+      if (document.body.classList.contains("dark-theme")) {
+        icon.src = "images/sun3D.png";
+      }
+      else {
+        icon.src = "images/moon3D.png";
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    let typed = new Typed(".auto-input", {
+      strings: ["Aakriti Malla.", "a Developer."],
+      typeSpeed: 100,
+      backSpeed: 100,
+      loop: true
+    })
+  </script>
+  <script>
+    $(document).ready(function () {
+      //Preloader
+      preloaderFadeOutTime = 500;
+      function myfunction() {
+        var preloader = $('.loader');
+        preloader.fadeOut(preloaderFadeOutTime);
+      }
+      myfunction();
+    });
+  </script>
+</body>
+
+</html>
