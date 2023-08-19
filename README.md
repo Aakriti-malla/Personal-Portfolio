@@ -15,4 +15,4 @@ This Portfolio is made witn the following Tech stack:
 
 
 
-<img src="https://forthebadge.com/images/badges/built-with-love.svg" >
+<!-- <img src="https://forthebadge.com/images/badges/built-with-love.svg" > -->
