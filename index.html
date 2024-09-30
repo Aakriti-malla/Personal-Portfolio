@@ -21,7 +21,6 @@
 
   <div class="preloader"></div>
 
-
   <!-- navbar -->
 
   <nav class="navbar">
@@ -93,6 +92,16 @@
     </div>
   </div>
 
+  <div id="popup" class="popup">
+    <div class="popup-content" style="padding: 2rem;">
+      <span class="close-btn" id="close-btn">&times;</span>
+      <p style="font-style: italic;">Warning: This website may contain outdated design trends and
+        questionable font choices.
+        but I am working on a
+        fresh and updated version. </p>
+    </div>
+  </div>
+
   <script>
     const toggleButton = document.getElementsByClassName('toggle-button')[0]
     const navbarLinks = document.getElementsByClassName('navbar-links')[0]
@@ -132,6 +141,20 @@
       }
       myfunction();
     });
+  </script>
+  <script>
+    // Show popup when the page loads
+    window.onload = function () {
+      document.getElementById("popup").style.display = "flex";
+    };
+
+    // Close popup when clicking the close button
+    document.getElementById("close-btn").onclick = function () {
+      document.getElementById("popup").style.display = "none";
+    };
+
+
+
   </script>
 </body>
 
