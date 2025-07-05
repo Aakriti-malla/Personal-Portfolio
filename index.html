@@ -1,29 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="images/a.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="icon" href="images/a.png" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
     crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <script src="index.js"></script>
-  <script src="https://kit.fontawesome.com/33c2ce40f1.js" crossorigin="anonymous"></script>
-  <title>Aakriti Malla</title>
-</head>
+  <script src="https://kit.fontawesome.com/33c2ce40f1.js" crossorigin="anonymous"></script> -->
+    <title>Aakriti Malla</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-<body onclick="myfunction()">
-  <!-- pre-loader  -->
+      body {
+        background-color: #f2e285;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding: 1rem;
+      }
 
-  <div class="preloader"></div>
+      .browser-box {
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        max-width: 600px;
+        width: 100%;
+        overflow: hidden;
+        border: 1px solid #ddd;
+      }
 
-  <!-- navbar -->
+      .browser-header {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem;
+        background-color: #f5f5f7;
+      }
 
-  <nav class="navbar">
+      .browser-buttons {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .browser-button {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+      }
+
+      .red {
+        background-color: #ff5f56;
+      }
+      .yellow {
+        background-color: #ffbd2e;
+      }
+      .green {
+        background-color: #27c93f;
+      }
+
+      .content {
+        padding: 2rem 1.5rem;
+        text-align: center;
+      }
+
+      .content h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .content p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        color: #333;
+      }
+
+      .animated-gradient-btn {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        color: white;
+        background: linear-gradient(270deg, #ff6ec4, #7873f5, #4ade80);
+        background-size: 600% 600%;
+        border: none;
+        border-radius: 12px;
+        text-decoration: none;
+        animation: gradientShift 5s ease infinite;
+        transition: transform 0.2s ease;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+      }
+
+      .animated-gradient-btn:hover {
+        transform: scale(1.05);
+      }
+
+      @keyframes gradientShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      @media (max-width: 500px) {
+        .content h1 {
+          font-size: 1.25rem;
+        }
+
+        .content p {
+          font-size: 0.95rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="browser-box">
+      <div class="browser-header">
+        <div class="browser-buttons">
+          <div class="browser-button red"></div>
+          <div class="browser-button yellow"></div>
+          <div class="browser-button green"></div>
+        </div>
+      </div>
+      <div class="content">
+        <h1>This version is officially archived!</h1>
+        <p>Explore the New grid. New vibe. New energy. (✿◡‿◡)</p>
+        <a
+          href="https://www.aakritimalla.in/"
+          class="animated-gradient-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Explore the New Portfolio →
+        </a>
+      </div>
+    </div>
+    <!-- pre-loader  -->
+
+    <!-- <div class="preloader"></div> -->
+
+    <!-- navbar -->
+
+    <!-- <nav class="navbar">
     <div class="brand-title">Aakriti Malla</div>
     <a href="#" class="toggle-button">
       <span class="bar"></span>
@@ -38,12 +171,12 @@
         <li><a class="a" href="Contact">Contact</a></li>
       </ul>
     </div>
-  </nav>
+  </nav> -->
 
-  <button id="dark"><img src="images/moon3D.png" id="icon"></button>
+    <!-- <button id="dark"><img src="images/moon3D.png" id="icon"></button> -->
 
-  <!-- main -->
-  <div class="body1 full-screen align-center">
+    <!-- main -->
+    <!-- <div class="body1 full-screen align-center">
     <div class="float-child">
       <div class="info">
         <h1>I'm <span class="auto-input"></span></h1>
@@ -59,7 +192,7 @@
               </svg></a>
           </button>
         </div>
-        <!-- <button class="download"><a href="Aakriti_Malla__CV.pdf" download="Aakriti Malla - CV">Download CV</a></button> -->
+        <button class="download"><a href="Aakriti_Malla__CV.pdf" download="Aakriti Malla - CV">Download CV</a></button>
       </div>
       <footer class="footer">
         <div class="bottom">
@@ -84,9 +217,9 @@
       </section>
 
     </div>
-  </div>
+  </div> -->
 
-  <div id="popup" class="popup">
+    <!-- <div id="popup" class="popup">
     <div class="popup-content" style="padding: 2rem;">
       <span class="close-btn" id="close-btn">&times;</span>
       <p style="font-style: italic;">Warning: This website may contain outdated design trends and
@@ -94,9 +227,9 @@
         but I am working on a
         fresh and updated version. </p>
     </div>
-  </div>
+  </div> -->
 
-  <script>
+    <!-- <script>
     const toggleButton = document.getElementsByClassName('toggle-button')[0]
     const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
@@ -149,7 +282,6 @@
 
 
 
-  </script>
-</body>
-
+  </script> -->
+  </body>
 </html>
